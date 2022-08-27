@@ -1,7 +1,75 @@
-import React from "react";
+import { useState, useEffect } from "react";
+import { FormRow, Logo, Alert } from "../components";
+import Wrapper from "../assets/wrappers/RegisterPage";
+
+const intialState = {
+  name: "",
+  email: "",
+  password: "",
+  isMember: true,
+  showAlert: false,
+};
 
 const Register = () => {
-  return <div>Register</div>;
+  const [values, setValues] = useState(intialState);
+
+  const toggleMember = () => {
+    setValues({ ...values, isMember: !values.isMember });
+  };
+
+  const handleChange = (e) => {
+    console.log(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(e.target);
+  };
+
+  return (
+    <Wrapper className="full-page">
+      <form className="form" onSubmit={handleSubmit}>
+        <Logo />
+        <h3>{values.isMember ? "Login" : "Register"}</h3>
+        {values.showAlert && <Alert />}
+        {/* name input */}
+        {!values.isMember && (
+          <FormRow
+            type="text"
+            value={values.name}
+            name="name"
+            handleChange={handleChange}
+          />
+        )}
+
+        {/* email input */}
+        <FormRow
+          type="text"
+          value={values.email}
+          name="email"
+          handleChange={handleChange}
+          labelText="email"
+        />
+        {/* password input */}
+        <FormRow
+          type="password"
+          value={values.password}
+          name="password"
+          handleChange={handleChange}
+          labelText="password"
+        />
+        <button type="submit" className="btn btn-block">
+          submit
+        </button>
+        <p>
+          {values.isMember ? "Not a member yet?" : "Already a member?"}
+          <button type="button" onClick={toggleMember} className="member-btn">
+            {values.isMember ? "Register" : "Login"}
+          </button>
+        </p>
+      </form>
+    </Wrapper>
+  );
 };
 
 export default Register;
