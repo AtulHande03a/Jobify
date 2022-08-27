@@ -1,0 +1,25 @@
+{
+  "name": "Jobify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AtulHande03a/Jobify.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AtulHande03a/Jobify/issues"
+  },
+  "homepage": "https://github.com/AtulHande03a/Jobify#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
