@@ -10,9 +10,9 @@ const register = async (req, res) => {
   }
 
   //check if email exist
-  const useAlreadyExists = await User.findOne({ email });
+  const userAlreadyExists = await User.findOne({ email });
 
-  if (useAlreadyExists) {
+  if (userAlreadyExists) {
     throw new BadRequestError("email already in use");
   }
 
