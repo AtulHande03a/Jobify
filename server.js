@@ -1,5 +1,6 @@
 import express from "express";
 import connectDB from "./db/connect.js";
+import "express-async-errors";
 
 const app = express();
 
