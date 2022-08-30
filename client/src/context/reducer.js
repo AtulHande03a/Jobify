@@ -4,6 +4,9 @@ import {
   REGISTER_USER_BEGIN,
   REGISTER_USER_SUCCESS,
   REGISTER_USER_ERROR,
+  LOGIN_USER_BEGIN,
+  LOGIN_USER_SUCCESS,
+  LOGIN_USER_ERROR,
 } from "./actions";
 
 const reducer = (state, action) => {
@@ -37,7 +40,7 @@ const reducer = (state, action) => {
         userLocation: action.payload.location,
         showAlert: true,
         alertType: "success",
-        alertText: "User created!! redirecting...",
+        alertText: "User created! Redirecting...",
       };
     case REGISTER_USER_ERROR:
       return {
@@ -48,8 +51,34 @@ const reducer = (state, action) => {
         alertType: "danger",
         alertText: action.payload.msg,
       };
+    case LOGIN_USER_BEGIN:
+      return {
+        ...state,
+        isLoading: true,
+      };
+    case LOGIN_USER_SUCCESS:
+      return {
+        ...state,
+        isLoading: false,
+        token: action.payload.token,
+        user: action.payload.user,
+        jobLocation: action.payload.location,
+        userLocation: action.payload.location,
+        showAlert: true,
+        alertType: "success",
+        alertText: "Login Successful! Redirecting...",
+      };
+    case LOGIN_USER_ERROR:
+      return {
+        ...state,
+        isLoading: false,
+
+        showAlert: true,
+        alertType: "danger",
+        alertText: action.payload.msg,
+      };
     default:
-      return state;
+      throw new Error(`no such action: ${action.type}`);
   }
   // throw new Error(`no such action: ${action.type}`);
 };
