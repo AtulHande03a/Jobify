@@ -20,7 +20,7 @@ const token = localStorage.getItem("token");
 const user = localStorage.getItem("user");
 const userLocation = localStorage.getItem("location");
 
-export const intialState = {
+export const initialState = {
   isLoading: false,
   showAlert: false,
   alertText: "",
@@ -35,7 +35,7 @@ export const intialState = {
 const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(reducer, intialState);
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   const displayAlert = () => {
     dispatch({ type: DISPLAY_ALERT });
