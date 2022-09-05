@@ -1,4 +1,4 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import Wrapper from "../../assets/wrappers/SharedLayout.js";
 import BigSidebar from "../../components/BigSidebar.js";
 import Navbar from "../../components/Navbar.js";
