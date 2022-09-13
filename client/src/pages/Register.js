@@ -63,6 +63,7 @@ const Register = () => {
             value={values.name}
             name="name"
             handleChange={handleChange}
+            placeholder="atul"
           />
         )}
 
@@ -73,6 +74,7 @@ const Register = () => {
           name="email"
           handleChange={handleChange}
           labelText="email"
+          placeholder="atul123@gmail.com"
         />
         {/* password input */}
         <FormRow
@@ -81,6 +83,7 @@ const Register = () => {
           name="password"
           handleChange={handleChange}
           labelText="password"
+          placeholder="atul123"
         />
         <button type="submit" className="btn btn-block" disabled={isLoading}>
           submit

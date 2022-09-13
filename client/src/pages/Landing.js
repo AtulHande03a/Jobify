@@ -16,12 +16,9 @@ const Landing = () => {
             job <span>tracking</span> app
           </h1>
           <p>
-            I'm baby small batch cronut paleo sriracha fit, farm-to-table
-            pinterest typewriter iPhone keffiyeh kombucha tbh blog lyft. Unicorn
-            mustache thundercats pitchfork kinfolk viral semiotics pabst food
-            truck meh. Polaroid kombucha semiotics vegan shabby chic
-            sustainable. Vexillologist kombucha vice chartreuse readymade
-            pitchfork.
+            Tired of maintaining track of your job applications. Fear not, we
+            got you.. Jobify, lets you keep track of your job applications and
+            allows you to track changes during your application process.
           </p>
           <Link to="/register" className="btn btn-hero">
             Login/Register
