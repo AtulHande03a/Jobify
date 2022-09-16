@@ -135,6 +135,11 @@ Let's connect and talk about development, music, books and much more 🌠!
 
 <br />
 
+## Acknowledgements
+
+ - [John Smilga](https://twitter.com/john_smilga)
+ 
+
 
 
 <hr />
